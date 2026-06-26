@@ -74,6 +74,21 @@
   .hero {
     max-width: 900px; margin: 0 auto;
     padding: 80px 2rem 64px;
+    display: flex; gap: 3rem; align-items: flex-start;
+  }
+  .hero-content { flex: 1; min-width: 0; }
+  .hero-photo {
+    flex-shrink: 0;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    box-shadow: 0 4px 24px rgba(9,105,218,0.12);
+    margin-top: 0.5rem;
+  }
+  @media (max-width: 640px) {
+    .hero { flex-direction: column-reverse; align-items: center; }
+    .hero-photo { width: 140px; height: 140px; }
   }
   .hero-eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
@@ -384,29 +399,32 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-eyebrow">Available for new opportunities</div>
-  <h1>K. Syama Sundara Rao<br/><em>Tech Lead · Full-Stack AI Engineer</em></h1>
-  <p class="hero-sub">
-    10+ years building scalable, AI-powered web platforms — from greenfield prototype to production at enterprise scale.
-    Specialising in TypeScript, React, Node.js, and agentic AI systems.
-  </p>
-  <div class="hero-tags">
-    <span class="tag blue">TypeScript</span>
-    <span class="tag blue">React.js</span>
-    <span class="tag blue">Node.js · NestJS</span>
-    <span class="tag green">MCP Protocol</span>
-    <span class="tag green">A2A Agents</span>
-    <span class="tag green">LangChain</span>
-    <span class="tag purple">OpenAI Realtime API</span>
-    <span class="tag purple">Semantic Kernel</span>
-    <span class="tag amber">PostgreSQL · PostGIS</span>
-    <span class="tag amber">AWS · Docker</span>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Available for new opportunities</div>
+    <h1>K. Syama Sundara Rao<br/><em>Tech Lead · Full-Stack AI Engineer</em></h1>
+    <p class="hero-sub">
+      10+ years building scalable, AI-powered web platforms — from greenfield prototype to production at enterprise scale.
+      Specialising in TypeScript, React, Node.js, and agentic AI systems.
+    </p>
+    <div class="hero-tags">
+      <span class="tag blue">TypeScript</span>
+      <span class="tag blue">React.js</span>
+      <span class="tag blue">Node.js · NestJS</span>
+      <span class="tag green">MCP Protocol</span>
+      <span class="tag green">A2A Agents</span>
+      <span class="tag green">LangChain</span>
+      <span class="tag purple">OpenAI Realtime API</span>
+      <span class="tag purple">Semantic Kernel</span>
+      <span class="tag amber">PostgreSQL · PostGIS</span>
+      <span class="tag amber">AWS · Docker</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Live Projects →</a>
+      <a href="mailto:syam.5492009@gmail.com" class="btn-secondary">✉ Get in Touch</a>
+      <a href="https://linkedin.com/in/ksyamasundararao" target="_blank" class="btn-secondary">LinkedIn ↗</a>
+    </div>
   </div>
-  <div class="hero-btns">
-    <a href="#projects" class="btn-primary">View Live Projects →</a>
-    <a href="mailto:syam.5492009@gmail.com" class="btn-secondary">✉ Get in Touch</a>
-    <a href="https://linkedin.com/in/ksyamasundararao" target="_blank" class="btn-secondary">LinkedIn ↗</a>
-  </div>
+  <img src="profile.jpg" alt="K. Syama Sundara Rao" class="hero-photo"/>
 </header>
 
 <!-- METRICS -->
